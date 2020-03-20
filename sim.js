@@ -10,7 +10,7 @@ var config = {
     infectivity: 3,
     population: 500,
     socialDistancing: 0,
-    recoveryTime: 4,
+    recoveryTime: 3,
     deathRate: 10,
     immunity: 0,
     speed: 4
@@ -71,7 +71,7 @@ var coolData = {
     gui.addButton({
         title: 'Spread Virus',
     }).on('click', (value) => {
-        data[parseInt(Math.random() * data.length)].state = 'infected';
+        infect(data[parseInt(Math.random() * data.length)]);
     });
     gui.addButton({
         title: 'Restart',
